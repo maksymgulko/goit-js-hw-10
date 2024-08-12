@@ -39,19 +39,15 @@ submitBtn.addEventListener('click', event => {
   const timer = setInterval(() => {
     const timeDiff = userSelectedDate.getTime() - Date.now();
     const countdown = convertMs(timeDiff);
-    daysCounter.innerHTML = countdown.days.toString().padStart(2, '0');
-    hoursCounter.innerHTML = countdown.hours.toString().padStart(2, '0');
-    minutesCounter.innerHTML = countdown.minutes.toString().padStart(2, '0');
-    secondsCounter.innerHTML = countdown.seconds.toString().padStart(2, '0');
-    submitBtn.disabled = true;
-
     if (timeDiff <= 0) {
       clearInterval(timer);
-      daysCounter.innerHTML = '00';
-      hoursCounter.innerHTML = '00';
-      minutesCounter.innerHTML = '00';
-      secondsCounter.innerHTML = '00';
       submitBtn.disabled = false;
+    } else {
+      daysCounter.innerHTML = countdown.days.toString().padStart(2, '0');
+      hoursCounter.innerHTML = countdown.hours.toString().padStart(2, '0');
+      minutesCounter.innerHTML = countdown.minutes.toString().padStart(2, '0');
+      secondsCounter.innerHTML = countdown.seconds.toString().padStart(2, '0');
+      submitBtn.disabled = true;
     }
   }, 1000);
 });
