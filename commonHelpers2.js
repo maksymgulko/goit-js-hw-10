@@ -1,2 +1,2 @@
-import"./assets/modulepreload-polyfill-3cfb730f.js";console.log("bar");
+import"./assets/modulepreload-polyfill-3cfb730f.js";import{i}from"./assets/vendor-77e16229.js";const n=document.querySelector(".form");n.addEventListener("submit",l);function l(t){t.preventDefault();const o=t.target,e=o.elements.delay.value.trim(),s=o.elements.state.value.trim();new Promise((r,m)=>{setTimeout(()=>{s==="fulfilled"?r():m()},e)}).then(()=>i.show({message:`✅ Fulfilled promise in ${e}ms`,position:"topCenter",backgroundColor:"#4CAF50",messageColor:"#fff"})).catch(()=>i.show({message:`❌ Rejected promise in ${e}ms`,position:"topCenter",backgroundColor:"#F44336",messageColor:"#fff"})),console.log(e,s),o.reset()}
 //# sourceMappingURL=commonHelpers2.js.map
