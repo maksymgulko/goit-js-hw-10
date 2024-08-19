@@ -42,12 +42,14 @@ submitBtn.addEventListener('click', event => {
     if (timeDiff <= 0) {
       clearInterval(timer);
       submitBtn.disabled = false;
+      myInput.disabled = false;
     } else {
       daysCounter.innerHTML = countdown.days.toString().padStart(2, '0');
       hoursCounter.innerHTML = countdown.hours.toString().padStart(2, '0');
       minutesCounter.innerHTML = countdown.minutes.toString().padStart(2, '0');
       secondsCounter.innerHTML = countdown.seconds.toString().padStart(2, '0');
       submitBtn.disabled = true;
+      myInput.disabled = true;
     }
   }, 1000);
 });

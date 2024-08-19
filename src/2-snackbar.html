@@ -4,18 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <title>Snackbar</title>
   </head>
   <body>
     <a href="./index.html">Go to home</a>
     <section>
       <form class="form">
-        <label>
+        <label class="delay">
           Delay (ms)
-          <input type="number" name="delay" required />
+          <input class="delay-input" type="number" name="delay" required />
         </label>
 
-        <fieldset>
+        <fieldset class="choices">
           <legend>State</legend>
           <label>
             <input type="radio" name="state" value="fulfilled" required />
@@ -27,7 +28,7 @@
           </label>
         </fieldset>
 
-        <button type="submit">Create notification</button>
+        <button class="submit-btn" type="submit">Create notification</button>
       </form>
     </section>
     <script type="module" src="./js/2-snackbar.js"></script>
